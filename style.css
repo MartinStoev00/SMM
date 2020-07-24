@@ -29,7 +29,7 @@
 	color: #fff;
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 600;
+	font-weight: 300;
 	font-size: 20px;
 	margin: 0 15px;
 	transition: .3s;
@@ -102,8 +102,29 @@
 .description__card {
 	font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
 	width: 40%;
-	background-color: red;
-	padding: 15px;
+	padding: 30px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
+	color: #444;
+	line-height: 1.6em;
+}
+.description__card h1 {
+	margin: 0 0 15px;
+}
+.description__card p {
+	margin: 10px 0 20px;
+}
+.description__card a {
+	color: var(--main-bg-color);
+	text-decoration: none;
+	border: 1.5px solid var(--main-bg-color);
+	padding: 15px;
+	border-radius: 50px;
+	margin: 10px 0;
+}
+
+.description__card a:hover {
+	transition: .3s;
+	background-color: var(--main-bg-color);
+	color: #fff;
 }
