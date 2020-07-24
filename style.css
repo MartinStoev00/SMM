@@ -32,7 +32,22 @@
 	font-weight: 600;
 	font-size: 20px;
 	margin: 0 15px;
+	transition: .3s;
 }
+.header__links:hover {
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+.contactus {
+	padding: 10px;
+	border: 1.5px solid #fff;
+	border-radius: 500px;
+}
+
+.contactus:hover {
+	background: #fff;
+	color: var(--main-bg-color);
+}
+
 .main {
 	display: flex;
     flex-direction: column;
@@ -65,7 +80,7 @@
     width: calc(80vw - 40px);
     margin: 0 10vw;
 	color: var(--main-bg-color);
-	font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+	font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 1.6em;
@@ -81,11 +96,14 @@
     align-content: center;
     align-items: center;
     width: 80vw;
-    margin: 0 10vw;
+    margin: 20px 10vw;
 }
 
 .description__card {
-	width: 500px;
-	height: 500px;
+	font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+	width: 40%;
 	background-color: red;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .6);
 }
