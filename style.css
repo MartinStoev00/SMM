@@ -102,6 +102,22 @@
   font-size: 100px;
 }
 
+.results-img {
+  height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: #cccccc;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("background-board-chart-data-590041.jpg");
+}
+
+.results-img div {
+  font-weight: 900;
+  font-size: 100px;
+}
+
 .location {
   height: 500px;
   position: relative;
@@ -426,5 +442,83 @@
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 60px 0 30px;
+}
+
+.results__text {
+  width: 100ch;
+  font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+  color: #555;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin: 30px 0;
+}
+
+.results__block {
+  font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  line-height: 1.4em;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.results__card img {
+  border-radius: 500px;
 }
 /*# sourceMappingURL=style.css.map */

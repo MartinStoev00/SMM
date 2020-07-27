@@ -1,0 +1,42 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+
+    margin: 60px 0 30px;
+    &__text {
+        width: 100ch;
+        font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+        color: #555;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.6em;
+        margin: 30px 0;
+    }
+    &__block {
+        font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+        line-height: 1.4em;
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        padding: 15px;
+        img {
+            border-radius: 500px;;
+        }
+    }
+}
