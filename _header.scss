@@ -16,13 +16,25 @@
     &__links {
         color: #fff;
         text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Poppins";
         font-weight: 300;
-        font-size: 20px;
+        font-size: 18px;
         margin: 0 15px;
         transition: .3s;
         &:hover {
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+        }
+    }
+    &__social {
+        &-link {
+            transition: .3s;
+            margin: 5px 10px;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            &:hover {
+                text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+            }
         }
     }
     .contactus {
