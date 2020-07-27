@@ -1,0 +1,59 @@
+.boosting {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+    margin: 60px 0 30px;
+
+    &__text {
+        width: 100ch;
+        font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+        color: #555;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.6em;
+        margin: 30px 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: center;
+        width: 80vw;
+    }
+
+    &__cart {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+        padding: 15px;
+        transition: .3s;
+        &:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0 0 10px;
+        }
+        i {
+            margin:  0 20px 20px;
+            font-size: 30px;
+            color: $main-color;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+            line-height: 1.4em;
+        }
+    }
+}

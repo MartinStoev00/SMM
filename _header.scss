@@ -1,0 +1,39 @@
+.header {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: $main-color;
+    &__logo {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    &__links {
+        color: #fff;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        margin: 0 15px;
+        transition: .3s;
+        &:hover {
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+        }
+    }
+    .contactus {
+        padding: 10px 15px;
+        border: 1.5px solid #fff;
+        border-radius: 500px;
+        &:hover {
+            background: #fff;
+            color: $main-color;
+        }
+    }
+}
+
+
