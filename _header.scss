@@ -47,13 +47,53 @@
         }
     }
 }
+#touchSideSwipe {
+    display: none;
+}
 
 
 @media screen and (max-width: 768px) {
     .header {
+        position: fixed;
+        width: 100vw;
+        z-index: 1;
         justify-content: center;
         &__links, &__social {
             display: none;
+        }
+    }
+    #touchSideSwipe {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: center;
+        .header__links {
+            display: block;
+            margin: 15px;
+        }
+        .header__link-block {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            flex: 10 1 auto;
+            margin-right: -50px;
+        }
+        .header__social{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+            position: absolute;
+            bottom: 10px;
+            margin-right: -50px;
+            width: 100%;
         }
     }
 }

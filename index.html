@@ -7,12 +7,28 @@
 	<link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./touch-sideswipe.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 </head>
 <body>
+	
 	<div class="header">
 		<div class="header__logo">SMM PRO</div>
 		<div class="header__group">
+			<a href="#" class="header__links">SERVICES</a>	
+			<a href="#" class="header__links">CONSULTING</a>
+			<a href="#" class="header__links">TECHNOLOGY</a>
+			<a href="#" class="header__links">PRICING</a>
+			<a href="#" class="header__links">CONTACT</a>
+		</div>
+		<div class="header__social">
+			<a href="#" class="fab fa-facebook-f header__social-link"></a>
+			<a href="#" class="fab fa-instagram header__social-link"></a>
+			<a href="#" class="fab fa-linkedin-in header__social-link"></a>
+		</div>
+	</div>
+	<div id="touchSideSwipe" class="touch-side-swipe">
+		<div class="header__link-block">
 			<a href="#" class="header__links">SERVICES</a>
 			<a href="#" class="header__links">CONSULTING</a>
 			<a href="#" class="header__links">TECHNOLOGY</a>
@@ -144,5 +160,31 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="touch-sideswipe.js"></script>
+    <script type="text/javascript">
+        let config = {
+            elementID: 'touchSideSwipe',
+            elementWidth: 400, //px
+            elementMaxWidth: 0.8, // *100%
+            sideHookWidth: 44, //px
+            moveSpeed: 0.2, //sec
+            opacityBackground: 0.8,
+            shiftForStart: 50, // px
+            windowMaxWidth: 1024, // px
+        }
+		let touchSideSwipe = new TouchSideSwipe(config);
+		
+		if(window.innerWidth < 768) {
+			let icon = document.getElementsByClassName("tss-label")[0];
+			let iconHeight = icon.getBoundingClientRect().height/2;
+			let iconWidth = icon.getBoundingClientRect().width;
+			let topLogo = document.getElementsByClassName("header__logo")[0].getBoundingClientRect().top;
+			let leftLogo = document.getElementsByClassName("header__logo")[0].getBoundingClientRect().left;
+			let heightLogo = document.getElementsByClassName("header__logo")[0].getBoundingClientRect().height/2;
+			icon.style.top = (topLogo + heightLogo - iconHeight) + 'px';
+			document.getElementsByClassName('tss--close')[0].style.left = ((leftLogo - iconWidth)/2) + 'px';
+		}
+    </script>
 </body>
 </html>
