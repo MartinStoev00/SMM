@@ -57,3 +57,43 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .making {
+        margin: 40px 0 60px;
+        &__block {
+            margin: 10px 0 20px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            &-content {
+                
+            }
+            &-heading {    
+                width: initial;
+                font-size: 20px;
+                text-align: center;
+            }
+            &-text {
+                width: initial;
+                text-align: center;
+            }
+            &-btn {
+                display: block;
+                width: calc(100% - 10px);
+            }
+            &-img {
+                width: 90%;
+            }
+            .making__block {
+                display: flex;
+                &-img {
+                    order: -1;
+                }
+            }
+        }
+        
+    }
+}

@@ -40,3 +40,19 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .description {
+        margin: 40px 0 60px;
+        &__blocks {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        &__card {
+            width: initial;
+            margin: 15px 0;
+        }
+    }
+}

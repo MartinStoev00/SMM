@@ -40,3 +40,24 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .results {
+        &__text {
+            width: initial;
+            line-height: 1.2em;
+            margin: 30px 10px;
+        }
+        &__block {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        &__card {
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
