@@ -9,6 +9,9 @@ $footer-color: rgb(41, 41, 41);
 @mixin main-color-transparent($per) {
     background-color: rgba(6, 38, 78, $per);
 }
+[data-lang="en"] {
+    display: none;
+}
 
 @mixin bgc-img($name) {
 	height: 500px;
