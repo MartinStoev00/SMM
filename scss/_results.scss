@@ -5,7 +5,6 @@
     justify-content: space-around;
     align-content: stretch;
     align-items: center;
-
     margin: 60px 0 30px;
     &__text {
         width: 100ch;
@@ -36,7 +35,12 @@
         align-items: center;
         padding: 15px;
         img {
-            border-radius: 500px;;
+            border-radius: 500px;
+        }
+        span {
+            @include main-color-transparent(.8);
+            color: #fff;
+            padding: 5px 10px;
         }
     }
 }

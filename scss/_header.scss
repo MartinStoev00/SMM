@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    width: calc(100vw - 50px);
+    z-index: 1;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    @include main-color-transparent(0.9);
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 160px;
+        img {
+            margin: 0 30px;
+            width: calc(100% - 60px);
+        }
+    }
+    &__group {
+        flex: 10 1 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    &__links {
+        color: #fff;
+        text-decoration: none;
+        font-family: "Poppins";
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0 15px;
+        transition: .3s;
+        &:hover {
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+        }
+    }
+    &__social {
+        width: 160px;
+        &-link {
+            transition: .3s;
+            margin: 5px 10px;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            &:hover {
+                text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+    .contactus {
+        padding: 10px 15px;
+        border: 1.5px solid #fff;
+        border-radius: 500px;
+        &:hover {
+            background: #fff;
+            color: $main-color;
+        }
+    }
+}
+
+.header__placeholder {
+    width: 100%;
+    @include main-color-transparent(1.0)
+}
+.heading__underline {
+    max-width: calc(80vw - 40px);
+    margin: 0 10vw;
+    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 600;
+    line-height: 1.6em;
+    font-size: 40px;
+    color: #444;
+    padding: 25px 20px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+
+    &::after {
+        content: '';
+        display: block;
+        margin: 10px 0 0;
+        height: 3px;
+        width: 40%;
+        background-color: $main-color;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading__underline {
+        font-weight: 600;
+        line-height: 1.2em;
+        font-size: 20px;
+        padding: 0px;
+        max-width: 80vw;
+    }
+    .header {
+        justify-content: center;
+        &__links, &__social {
+            display: none;
+        }
+    }
+}

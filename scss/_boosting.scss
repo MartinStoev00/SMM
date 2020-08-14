@@ -18,12 +18,12 @@
     }
 
     &__block {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: stretch;
-        align-items: center;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "one two"
+          "three three";
         width: 80vw;
     }
 
@@ -36,6 +36,15 @@
         align-items: flex-start;
         padding: 15px;
         transition: .3s;
+        &:nth-child(1) {
+            grid-area: one;
+        }
+        &:nth-child(2) {
+            grid-area: two;
+        }
+        &:nth-child(3) {
+            grid-area: three;
+        }
         &:hover {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
             cursor: pointer;

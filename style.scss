@@ -1,45 +1,13 @@
-$main-color: rgba(71, 97, 162, 0.9);
-
 * {
 	margin: 0;
 	padding: 0;
 }
 
-.heading__underline {
-    max-width: calc(80vw - 40px);
-    margin: 0 10vw;
-    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-    font-weight: 600;
-    line-height: 1.6em;
-    font-size: 40px;
-    color: #444;
-    padding: 25px 20px;
-    text-align: center;
-    
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: stretch;
-    align-items: center;
+$main-color: #06264d;
+$footer-color: rgb(41, 41, 41);
 
-    &::after {
-        content: '';
-        display: block;
-        margin: 10px 0 0;
-        height: 3px;
-        width: 40%;
-        background-color: $main-color;
-    }
-}
-
-.main {
-	display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: stretch;
+@mixin main-color-transparent($per) {
+    background-color: rgba(6, 38, 78, $per);
 }
 
 @mixin bgc-img($name) {
@@ -89,9 +57,26 @@ $main-color: rgba(71, 97, 162, 0.9);
     }
 }
 
+.main {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: stretch;
+}
 
 .social-media {
-    @include bgc-img("pics/android-app-blog-blogging-267389.jpg");
+    @include bgc-img("pics/clear_background.png");
+    img {
+        width: 40%;
+    }
+    h3 {
+        color: $main-color;
+        font-weight: 100;
+        text-shadow: none;
+        font-family: 'Anonymous Pro', monospace;
+    }
     a {
         transition: .3s;
         width: calc( 16ch + 30px);
@@ -108,33 +93,22 @@ $main-color: rgba(71, 97, 162, 0.9);
             text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
         }
     }
-    h1 {
-        font-size: 50px;
-    }
-}
-
-.progress {
-    @include bgc-img("pics/positive-young-african-american-lady-holding-light-bulb-in-3973059.jpg");
-}
-
-.results-img {
-    @include bgc-img("pics/background-board-chart-data-590041.jpg"); 
 }
 
 .location {
-	@include bgc-img("pics/olga-kharlamova-EWu9Ft3yP24-unsplash.jpg");
+	@include bgc-img("pics/bg-1.jpg");
     margin: 0 0 30px;
 }
 
+.progress {
+    @include bgc-img("pics/bg-2.jpg");
+}
+
+.results-img {
+    @include bgc-img("pics/bg-3.jpg"); 
+}
 
 @media screen and (max-width: 768px) {
-    .heading__underline {
-        font-weight: 600;
-        line-height: 1.2em;
-        font-size: 20px;
-        padding: 0px;
-        max-width: 80vw;
-    }
     .social-media {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -153,5 +127,5 @@ $main-color: rgba(71, 97, 162, 0.9);
     }
 }
 
-@import 'header', 'description', 'boosting', 'making', 'results';
+@import 'scss/header', 'scss/description', 'scss/boosting', 'scss/making', 'scss/results', 'scss/footer';
 
