@@ -25,8 +25,16 @@
 			<a href="#" class="fab fa-facebook-f header__social-link"></a>
 			<a href="#" class="fab fa-instagram header__social-link"></a>
 			<a href="#" class="fab fa-linkedin-in header__social-link"></a>
-			<a href="#bg" data-btn><img src="./pics/flag-bg.png" alt="Bg" style="width: 20px;"></a>
-			<a href="#en" data-btn><img src="./pics/flag-en.jpg" alt="En" style="width: 20px;"></a>
+			<div class="header__lang">
+				<div class="header__lang__btn">
+					<a href="#BG" data-btn><img src="./pics/flag-BG.png" />
+					<i class="fas fa-chevron-down"></i></a>
+				</div>
+				<div class="header__lang__dropdown">
+					<a href="#EN" data-btn><img src="./pics/flag-EN.png" /></a>
+					<a href="#RU" data-btn><img src="./pics/flag-RU.png" /></a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="header__placeholder"></div>
@@ -176,48 +184,6 @@
 			<p class="footer__text">Peak Social Media</p>
 		</div>
 	</div>
-	<script>
-		let headerHeightWindow = () => {
-			let headerH = document.getElementsByClassName("header")[0].getBoundingClientRect().height;
-			document.getElementsByClassName("header__placeholder")[0].style.height = (headerH) + "px";
-		}
-		window.onresize = headerHeightWindow;
-		window.onload = headerHeightWindow;
-		let btns = document.querySelectorAll("[data-btn]");
-		let bg = document.querySelectorAll('[data-lang="bg"]')
-		let en = document.querySelectorAll('[data-lang="en"]')
-		let hideEn = () => {
-			en.forEach((enBlock) => {
-				enBlock.style.display = "none";
-			})
-			bg.forEach((bgBlock) => {
-				bgBlock.style.display = "inline";
-			})
-		}
-		let hideBg = () => {
-			en.forEach((enBlock) => {
-				enBlock.style.display = "inline";
-			})
-			bg.forEach((bgBlock) => {
-				bgBlock.style.display = "none";
-			})
-		}
-		if(window.location.hash) {
-			if(window.location.hash === "#en") {
-				hideBg()
-			} else {
-				hideEn()
-			}
-		}
-		btns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if(btn.getAttribute("href") === "#en") {
-					hideBg()
-				} else {
-					hideEn()
-				}
-			})
-		})
-	</script>
+	<script src="./main.js"></script>
 </body>
 </html>

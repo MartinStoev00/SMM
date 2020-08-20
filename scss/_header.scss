@@ -57,6 +57,43 @@
             }
         }
     }
+    &__lang {
+        display: inline;
+        position: relative;
+        &__btn { 
+            display: inline;
+            a {
+                text-decoration: none;
+            }
+            img {
+                width: 20px;
+            }
+            i {
+                transition: .3s;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        &__dropdown {
+            display: none;
+            position: absolute;
+            right: 10px;
+            a {
+
+                text-decoration: none;
+                opacity: 0.6;
+            }
+            img {
+                margin: 5px;
+                width: 20px;
+            }
+            i {
+                transition: .3s;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
     .contactus {
         padding: 10px 15px;
         border: 1.5px solid #fff;
