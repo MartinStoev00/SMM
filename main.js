@@ -4,6 +4,7 @@ let langBtn = document.getElementsByClassName(`${selectedArea}__lang__btn`)[0]
 let langDropdown = document.getElementsByClassName(`${selectedArea}__lang__dropdown`)[0]
 let langBtnArrow = langBtn.getElementsByTagName("i")[0]
 let btns = document.getElementsByClassName(selectedArea)[0].querySelectorAll("[data-btn]");
+let linksAnchor = document.getElementsByClassName(selectedArea)[0].getElementsByTagName('p')
 let headerHeightWindow = () => {
     let headerH = document.getElementsByClassName("header")[0].getBoundingClientRect().height;
     document.getElementsByClassName("header__placeholder")[0].style.height = (headerH) + "px";
@@ -62,6 +63,16 @@ langBtn.addEventListener("click", () => {
         langBtnArrow.style.transform = "rotate(180deg)"
     }
 });
+
+Array.prototype.forEach.call(linksAnchor, (a) => {
+    let anchTo = a.getAttribute("data-location")
+    a.addEventListener("click", () => {
+        $('html,body').animate({
+            scrollTop: $(`.${anchTo}`).offset().top - 120},
+            'slow');
+            closeNav()
+    });
+})
 
 if(window.location.hash) {
     showSelect(window.location.hash)

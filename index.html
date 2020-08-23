@@ -10,17 +10,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<div class="sidenav__logo"><img src="./peak_logo.png" alt="Logo"></div>
 		<div class="sidenav__links">
-			<a href="#"><span data-lang="en">SERVICES</span><span data-lang="bg">Услуги</span></a>	
-			<a href="#"><span data-lang="en">CONSULTING</span><span data-lang="bg">Консултиране</span></a>
-			<a href="#"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></a>
-			<a href="#"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></a>
-			<a href="#"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></a>
+			<p data-location="description"><span data-lang="en">SERVICES</span><span data-lang="bg">Услуги</span></p>	
+			<p data-location="boosting"><span data-lang="en">CONSULTING</span><span data-lang="bg">Консултиране</span></p>
+			<p data-location="making"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></p>
+			<p data-location="results"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></p>
+			<p data-location="footer"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></p>
 		</div>
 		<div class="sidenav__social">
 			<a href="#" class="fab fa-facebook-f"></a>
@@ -41,21 +42,11 @@
 	<div class="header">
 		<div class="header__logo"><img src="./peak_logo.png" alt="Logo"></div>
 		<div class="header__group">
-			<a href="#" class="header__links"><span data-lang="en">SERVICES</span><span data-lang="bg">Услуги</span></a>	
-			<a href="#" class="header__links"><span data-lang="en">CONSULTING</span><span data-lang="bg">Консултиране</span></a>
-			<a href="#" class="header__links"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></a>
-			<a href="#" class="header__links"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></a>
-			<a href="#" class="header__links"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></a>
-			<div class="header__lang">
-				<div class="header__lang__btn">
-					<a href="#BG" data-btn><img src="./pics/flag-BG.png" />
-					<i class="fas fa-chevron-down"></i></a>
-				</div>
-				<div class="header__lang__dropdown">
-					<a href="#EN" data-btn><img src="./pics/flag-EN.png" /></a>
-					<a href="#RU" data-btn><img src="./pics/flag-RU.png" /></a>
-				</div>
-			</div>
+			<p href="#" data-location="description" class="header__links"><span data-lang="en">SERVICES</span><span data-lang="bg">Услуги</span></p>	
+			<p href="#" data-location="boosting" class="header__links"><span data-lang="en">CONSULTING</span><span data-lang="bg">Консултиране</span></p>
+			<p href="#" data-location="making" class="header__links"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></p>
+			<p href="#" data-location="results" class="header__links"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></p>
+			<p href="#" data-location="footer" class="header__links"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></p>
 		</div>
 		<div class="header__social">
 			<a href="#" class="fab fa-facebook-f header__social-link"></a>

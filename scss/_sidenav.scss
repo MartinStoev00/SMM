@@ -24,7 +24,8 @@
             font-size: 22px;
             display: inline;
         }
-        a {
+        a, p {
+            cursor: pointer;
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
@@ -47,10 +48,10 @@
         }
         &__links {
             margin-bottom: 10px;
-            a {
+            p {
                 display: block;
             }
-            a:hover {
+            p:hover {
                 color: #f1f1f1;
             }
         }
