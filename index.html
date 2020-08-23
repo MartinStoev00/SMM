@@ -12,6 +12,32 @@
 	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="sidenav__logo"><img src="./peak_logo.png" alt="Logo"></div>
+		<div class="sidenav__links">
+			<a href="#"><span data-lang="en">SERVICES</span><span data-lang="bg">Услуги</span></a>	
+			<a href="#"><span data-lang="en">CONSULTING</span><span data-lang="bg">Консултиране</span></a>
+			<a href="#"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></a>
+			<a href="#"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></a>
+			<a href="#"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></a>
+		</div>
+		<div class="sidenav__social">
+			<a href="#" class="fab fa-facebook-f"></a>
+			<a href="#" class="fab fa-instagram"></a>
+			<a href="#" class="fab fa-linkedin-in"></a>
+		</div>
+		<div class="sidenav__lang">
+			<div class="sidenav__lang__btn">
+				<a href="#BG" data-btn><img src="./pics/flag-BG.png" />
+				<i class="fas fa-chevron-down"></i></a>
+			</div>
+			<div class="sidenav__lang__dropdown">
+				<a href="#EN" data-btn><img src="./pics/flag-EN.png" /></a>
+				<a href="#RU" data-btn><img src="./pics/flag-RU.png" /></a>
+			</div>
+		</div>
+	</div>
 	<div class="header">
 		<div class="header__logo"><img src="./peak_logo.png" alt="Logo"></div>
 		<div class="header__group">
@@ -20,6 +46,16 @@
 			<a href="#" class="header__links"><span data-lang="en">TECHNOLOGY</span><span data-lang="bg">Технология</span></a>
 			<a href="#" class="header__links"><span data-lang="en">PRICING</span><span data-lang="bg">Цена</span></a>
 			<a href="#" class="header__links"><span data-lang="en">CONTACT</span><span data-lang="bg">Контакт</span></a>
+			<div class="header__lang">
+				<div class="header__lang__btn">
+					<a href="#BG" data-btn><img src="./pics/flag-BG.png" />
+					<i class="fas fa-chevron-down"></i></a>
+				</div>
+				<div class="header__lang__dropdown">
+					<a href="#EN" data-btn><img src="./pics/flag-EN.png" /></a>
+					<a href="#RU" data-btn><img src="./pics/flag-RU.png" /></a>
+				</div>
+			</div>
 		</div>
 		<div class="header__social">
 			<a href="#" class="fab fa-facebook-f header__social-link"></a>
@@ -36,6 +72,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="sidenav__btn" onclick="openNav()"><i class="fas fa-bars"></i></div>
 	</div>
 	<div class="header__placeholder"></div>
 	<div class="main">

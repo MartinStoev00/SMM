@@ -1,0 +1,103 @@
+.sidenav {
+    display: none;
+    &__btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        &__btn {
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            display: inline;
+        }
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            transition: 0.3s;
+        }
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            width: 180px;
+            img {
+                margin: 0 30px;
+                width: calc(100% - 60px);
+            }
+            margin-bottom: 30px;
+        }
+        &__links {
+            margin-bottom: 10px;
+            a {
+                display: block;
+            }
+            a:hover {
+                color: #f1f1f1;
+            }
+        }
+          
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        &__lang {
+            display: inline;
+            position: relative;
+            &__btn { 
+                display: inline;
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    width: 20px;
+                }
+                i {
+                    font-size: 12px;
+                    transition: .3s;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+            &__dropdown {
+                width: 40px;
+                display: none;
+                a {
+    
+                    text-decoration: none;
+                    opacity: 0.6;
+                }
+                img {
+                    margin: 5px;
+                    width: 20px;
+                }
+                i {
+                    transition: .3s;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

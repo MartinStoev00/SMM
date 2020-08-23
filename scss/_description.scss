@@ -18,9 +18,12 @@
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .description {
         margin: 40px 0 60px;
+        &__blocks {
+            width: calc(100% - 40px);
+            padding: 10px 20px;
+        }
     }
 }

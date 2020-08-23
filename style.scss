@@ -59,8 +59,11 @@ $footer-color: rgb(41, 41, 41);
         }
     }
 }
-
+body {
+    transition: .3s;
+}
 .main {
+    transition: .3s;
 	display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -130,5 +133,5 @@ $footer-color: rgb(41, 41, 41);
     }
 }
 
-@import 'scss/header', 'scss/description', 'scss/boosting', 'scss/making', 'scss/results', 'scss/footer';
+@import 'scss/header', 'scss/description', 'scss/boosting', 'scss/making', 'scss/results', 'scss/footer', 'scss/sidenav';
 
