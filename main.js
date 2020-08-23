@@ -27,9 +27,9 @@ window.addEventListener('touchstart', (e) => {
 
 window.addEventListener('touchend', (e) => {
     touchendX = e.changedTouches[0].screenX
-    if (touchendX > touchstartX) {
+    if (touchendX - 50 > touchstartX) {
         openNav()
-    } else if (touchendX < touchstartX) {
+    } else if (touchendX < touchstartX - 50) {
         closeNav()
     }
 }, false)
