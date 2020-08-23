@@ -54,6 +54,13 @@ btns.forEach((btn) => {
     })
 })
 
+Array.prototype.forEach.call(document.querySelectorAll('[src="./peak_logo.png"]'), (pic) => {
+    pic.addEventListener('click', () => {
+        $('html,body').animate({scrollTop: 0},'slow');
+        closeNav()
+    })
+})
+
 langBtn.addEventListener("click", () => {
     if(langDropdown.style.display == "block") {
         langDropdown.style.display = "none"
