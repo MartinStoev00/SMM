@@ -1,5 +1,5 @@
 let selectedArea = innerWidth < 768 ? "sidenav" : "header";
-
+let touchstartX, touchendX = 0
 let langBtn = document.getElementsByClassName(`${selectedArea}__lang__btn`)[0]
 let langDropdown = document.getElementsByClassName(`${selectedArea}__lang__dropdown`)[0]
 let langBtnArrow = langBtn.getElementsByTagName("i")[0]
@@ -19,6 +19,19 @@ let showSelect = (input) => {
 
 window.onresize = headerHeightWindow
 window.onload = headerHeightWindow
+
+window.addEventListener('touchstart', (e) => {
+    touchstartX = e.changedTouches[0].screenX
+}, false)
+
+window.addEventListener('touchend', (e) => {
+    touchendX = e.changedTouches[0].screenX
+    if (touchendX > touchstartX) {
+        openNav()
+    } else if (touchendX < touchstartX) {
+        closeNav()
+    }
+}, false)
 
 btns.forEach((btn) => {
     btn.addEventListener("click", () => {
