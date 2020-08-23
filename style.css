@@ -291,6 +291,9 @@ body {
     font-weight: 100;
     margin: 5px auto;
   }
+  .social-media img {
+    width: 70%;
+  }
 }
 
 .header {
@@ -527,7 +530,6 @@ body {
 }
 
 .description__blocks {
-  text-align: center;
   font-family: Arial;
   font-size: 18px;
   width: 100%;
@@ -538,21 +540,62 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.description__blocks div {
+.description__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   line-height: 1.6em;
-  width: 100ch;
+  width: 40vw;
+  margin: 10px;
+  padding: 15px;
+}
+
+.description__card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.description__card h3 i {
+  display: none;
+}
+
+.description__card i {
+  margin: 0 20px 20px;
+  font-size: 30px;
+  color: #06264d;
+}
+
+.description__card p {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  line-height: 1.4em;
 }
 
 @media screen and (max-width: 768px) {
@@ -560,8 +603,21 @@ body {
     margin: 40px 0 60px;
   }
   .description__blocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: calc(100% - 40px);
     padding: 10px 20px;
+  }
+  .description__card {
+    width: 80vw;
+  }
+  .description__card i {
+    display: none;
+  }
+  .description__card h3 i {
+    display: inline;
   }
 }
 
