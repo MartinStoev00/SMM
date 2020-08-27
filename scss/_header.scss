@@ -150,8 +150,17 @@
     .header {
         padding: 15px 40px;
         width: calc(100% - 80px);
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
         &__links, &__social {
             display: none;
+        }
+        &__logo {
+            flex: 4 1 auto;
+            img {
+                width: 130px;
+            }
         }
         &__lang {
             display: none;
