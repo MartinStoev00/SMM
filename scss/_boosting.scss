@@ -53,15 +53,25 @@
             font-family: 'Poppins', sans-serif;
             color: #333;
             margin: 0 0 10px;
-            i {
+            .fa-globe, i {
                 display: none;
             }
         }
-        i {
+
+        .fa-globe, i {
             margin:  0 20px 20px;
             font-size: 30px;
             color: $main-color;
         }
+
+        .fa-globe {  
+            color: white;
+            background-color: $main-color;
+            display: inline; 
+            border-radius: 16px;
+            padding: 1px;
+        }
+
         p {
             font-family: 'Poppins', sans-serif;
             color: #444;
@@ -85,11 +95,11 @@
              "three";
         }
         &__cart {
-            i {
+            .fa-globe, i {
                 display: none;
             }
             h3 {
-                i {
+                .fa-globe, i {
                     display: inline;
                 }
             }

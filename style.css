@@ -716,14 +716,22 @@ body {
   margin: 0 0 10px;
 }
 
-.boosting__cart h3 i {
+.boosting__cart h3 .fa-globe, .boosting__cart h3 i {
   display: none;
 }
 
-.boosting__cart i {
+.boosting__cart .fa-globe, .boosting__cart i {
   margin: 0 20px 20px;
   font-size: 30px;
   color: #06264d;
+}
+
+.boosting__cart .fa-globe {
+  color: white;
+  background-color: #06264d;
+  display: inline;
+  border-radius: 16px;
+  padding: 1px;
 }
 
 .boosting__cart p {
@@ -742,10 +750,10 @@ body {
   .boosting__block {
         grid-template-areas: "one" "two" "three";
   }
-  .boosting__cart i {
+  .boosting__cart .fa-globe, .boosting__cart i {
     display: none;
   }
-  .boosting__cart h3 i {
+  .boosting__cart h3 .fa-globe, .boosting__cart h3 i {
     display: inline;
   }
 }
