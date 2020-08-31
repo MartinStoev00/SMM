@@ -54,7 +54,7 @@ btns.forEach((btn) => {
     })
 })
 
-Array.prototype.forEach.call(document.querySelectorAll('[src="./peak_logo.png"]'), (pic) => {
+Array.prototype.forEach.call(document.querySelectorAll('[src="./pics/peak_logo.png"]'), (pic) => {
     pic.addEventListener('click', () => {
         $('html,body').animate({scrollTop: 0},'slow');
         closeNav()
