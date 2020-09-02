@@ -74,12 +74,18 @@ langBtn.addEventListener("click", () => {
 Array.prototype.forEach.call(linksAnchor, (a) => {
     let anchTo = a.getAttribute("data-location")
     a.addEventListener("click", () => {
-        $('html,body').animate({
-            scrollTop: $(`.${anchTo}`).offset().top - 120},
-            'slow');
-            closeNav()
+        $('html,body').animate({scrollTop: $(`.${anchTo}`).offset().top - 120},'slow');
+        closeNav()
     });
 })
+
+$(document).scroll(() => {
+    let scrollSpeed = window.width > 768 ? -10 : -30;
+    let mainOffset = $('.main').offset().top;
+    let scroll = $(window).scrollTop();
+    let sideOffset = window.width > 768 ? "0% " : "-100px "; 
+    $(".main").css("background-position", sideOffset + (mainOffset + (scroll/scrollSpeed)) + "px");
+});
 
 if(window.location.hash) {
     showSelect(window.location.hash)
@@ -100,10 +106,10 @@ function openNav() {
     document.getElementsByTagName("body")[0].style.backgroundColor = "#333"
 }
   
-  function closeNav() {
+function closeNav() {
     document.getElementsByClassName("sidenav")[0].style.width = "0";
     document.getElementsByClassName("header")[0].style.opacity = "1";
     document.getElementsByClassName("main")[0].style.opacity = "1";
     document.getElementsByClassName("footer")[0].style.opacity = "1";
     document.getElementsByTagName("body")[0].style.backgroundColor = "#fff"
-  }
+}

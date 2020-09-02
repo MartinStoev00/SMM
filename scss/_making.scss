@@ -1,11 +1,12 @@
 .making {
-    margin: 100px 0 0;
+    padding: 100px 0 0;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: stretch;
     align-items: center;
+    background-color: #fff;
     &__block {
         width: 70vw;
         display: flex;
@@ -60,7 +61,7 @@
 
 @media screen and (max-width: 768px) {
     .making {
-        margin: 40px 0 60px;
+        padding: 40px 0 60px;
         &__block {
             margin: 10px 0 20px;
             flex-direction: column;
