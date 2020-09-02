@@ -18,8 +18,8 @@ let showSelect = (input) => {
     })
 }
 
+headerHeightWindow()
 window.onresize = headerHeightWindow
-window.onload = headerHeightWindow
 
 window.addEventListener('touchstart', (e) => {
     touchstartX = e.changedTouches[0].screenX
