@@ -18,8 +18,8 @@ let showSelect = (input) => {
     })
 }
 
-headerHeightWindow()
 window.onresize = headerHeightWindow
+window.onload = headerHeightWindow
 
 window.addEventListener('touchstart', (e) => {
     touchstartX = e.changedTouches[0].screenX
@@ -80,11 +80,10 @@ Array.prototype.forEach.call(linksAnchor, (a) => {
 })
 
 $(document).scroll(() => {
-    let scrollSpeed = window.width > 768 ? -10 : -30;
+    let scrollSpeed = window.width > 768 ? -160 : -30;
     let mainOffset = $('.main').offset().top;
     let scroll = $(window).scrollTop();
-    let sideOffset = window.width > 768 ? "0% " : "-100px "; 
-    $(".main").css("background-position", sideOffset + (mainOffset + (scroll/scrollSpeed)) + "px");
+    $(".main").css("background-position", `${window.width > 768 ? "0% " : "-100px "} ${mainOffset + (scroll/scrollSpeed)}px`);
 });
 
 if(window.location.hash) {
